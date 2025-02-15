@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="fab.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Character Counter</h2>
+            <textarea id="inputtext" placeholder="Enter Your text..."></textarea>
+            <p>Character Count: <span id="count">0</span></p>
+        </div>
+    </div>
+
+    <script>
+        let inputtext = document.getElementById('inputtext');
+        let count = document.getElementById('count');
+
+        inputtext.addEventListener("input", () => {
+            count.textContent = inputtext.value.length;
+        });
+    </script>
+</body>
+</html>
